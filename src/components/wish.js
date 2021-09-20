@@ -91,6 +91,7 @@ function Wish() {
                 type="text"
                 className="form-control"
                 id="name"
+                name="name"
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 required
@@ -104,6 +105,7 @@ function Wish() {
                 type="email"
                 className="form-control"
                 id="email"
+                name="email"
                 onChange={(e) => setEmail(e.target.value)}
                 value={email}
               />
@@ -113,9 +115,10 @@ function Wish() {
                 Phone Number
               </label>
               <input
-                type="telp"
+                type="tel"
                 className="form-control"
                 id="phone"
+                name="telp"
                 onChange={(e) => setTelp(e.target.value)}
                 value={telp}
               />
@@ -127,6 +130,7 @@ function Wish() {
               <textarea
                 className="form-control"
                 id="wish"
+                name="wish"
                 rows="3"
                 onChange={(e) => setWish(e.target.value)}
                 value={wish}
