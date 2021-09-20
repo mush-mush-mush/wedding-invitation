@@ -16,7 +16,7 @@ function App() {
       <Header />
       <Quote />
       <Couple />
-      <Location />
+      {/* <Location /> */}
       <Wish />
     </motion.div>
   );
