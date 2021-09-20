@@ -293,8 +293,9 @@ h3 {
 
   & .couple--img {
     width: 60%;
-    max-width: 35rem;
-    max-height: 50rem;
+    min-height: 50rem;
+    max-width: 45rem;
+    max-height: 60rem;
     border-radius: 15px;
     object-fit: cover;
     object-position: center;
@@ -308,6 +309,7 @@ h3 {
 
     @media only screen and (max-width: 1199px) {
       bottom: 3rem;
+      width: 60%;
     }
 
     & h3 {
