@@ -1,0 +1,669 @@
+$font-family-sans-serif: "Montserrat", sans-serif;
+
+@import "~bootstrap/scss/bootstrap";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: 991px) {
+    font-size: 56.25%;
+  }
+
+  @media only screen and (max-width: 767px) {
+    font-size: 50%;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.wreath {
+  width: 35rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  stroke-width: 0.3rem;
+  opacity: 0.3;
+  animation: dash 4s ease-in-out forwards;
+}
+
+.bird {
+  width: 45rem;
+  height: 30rem;
+  left: 2rem;
+  z-index: 100;
+  position: absolute;
+  stroke-dasharray: 1650;
+  stroke-dashoffset: 1650;
+  stroke-width: 0.3rem;
+  opacity: 0.3;
+  animation: dash 4s ease-in-out forwards;
+
+  @media only screen and (max-width: 767px) {
+    top: -5rem;
+    width: 35rem;
+  }
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.main {
+  color: #fff;
+  height: 100vh;
+  padding: 2rem;
+
+  & .main-in {
+    height: 100%;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: left;
+    position: relative;
+
+    & .text-area {
+      display: flex;
+      flex-direction: column;
+      width: fit-content;
+      position: absolute;
+      left: 15rem;
+      bottom: 10rem;
+    }
+
+    & h1,
+    h4,
+    h5 {
+      display: inline;
+      text-shadow: 0 0 4px rgba(00, 00, 00, 0.2);
+    }
+
+    & h1 {
+      font-size: 10rem;
+    }
+
+    & h5 {
+      font-size: 2.5rem;
+    }
+
+    & h4 {
+      font-size: 4rem;
+      align-self: flex-end;
+    }
+
+    @media only screen and (max-width: 991px) {
+      & .text-area {
+        left: 6rem;
+        bottom: 6rem;
+      }
+
+      & h1 {
+        font-size: 6rem;
+      }
+
+      & h5 {
+        font-size: 1.8rem;
+      }
+
+      & h4 {
+        font-size: 2.2rem;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      & .text-area {
+        left: 2rem;
+        bottom: 8rem;
+      }
+
+      & h1 {
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+.quote {
+  color: #6d6875;
+  position: relative;
+  padding: 8rem 2rem;
+  min-height: 70rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    opacity: 0.5;
+    background-color: #6d6875;
+  }
+
+  & .quote--text {
+    width: 60%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    & h2 {
+      font-size: 6rem;
+      text-shadow: 0px 0px 4px rgba($color: #ffffff, $alpha: 0.5);
+    }
+
+    & h5 {
+      font-size: 2rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 75%;
+      left: 2rem;
+      transform: translateX(0);
+
+      & h2 {
+        font-size: 5rem;
+      }
+    }
+  }
+
+  & .quote--left {
+    position: relative;
+    align-self: flex-start;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 13vw;
+      left: 0;
+      width: 8vw;
+      height: 8vw;
+      background-color: #fffcef;
+      border-radius: 15px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12vw;
+      height: 12vw;
+      background-color: #fffcef;
+      border-radius: 15px;
+    }
+  }
+
+  & .quote--img {
+    align-self: flex-end;
+    object-fit: cover;
+    object-position: center;
+    height: 70rem;
+    border-radius: 15px;
+  }
+}
+
+.couple {
+  color: #6d6875;
+  position: relative;
+  padding: 8rem 2rem;
+
+  &::before {
+    content: "Groom & Bride";
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    font-size: 6rem;
+    text-align: right;
+    line-height: 6rem;
+    width: 30rem;
+    opacity: 0.2;
+
+    @media only screen and (max-width: 767px) {
+      width: 20rem;
+      font-size: 4rem;
+      line-height: 4rem;
+      z-index: 100;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    opacity: 0.5;
+    background-color: #6d6875;
+  }
+
+  & .groom {
+    position: relative;
+    margin-bottom: 15rem;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 0;
+    }
+
+    & .couple--text {
+      right: 2rem;
+    }
+  }
+
+  & .bride {
+    position: relative;
+    margin-top: 15rem;
+
+    @media only screen and (max-width: 991px) {
+      margin-top: 5rem;
+    }
+
+    & .couple--text {
+      left: 2rem;
+    }
+  }
+
+  & .couple--img {
+    width: 60%;
+    border-radius: 15px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  & .couple--text {
+    color: #6d6875;
+    position: absolute;
+    bottom: 5rem;
+    width: 50%;
+
+    @media only screen and (max-width: 1199px) {
+      bottom: 3rem;
+    }
+
+    & h3 {
+      font-size: 4.3rem;
+      margin-bottom: 3rem;
+
+      @media only screen and (max-width: 1199px) {
+        font-size: 3.6rem;
+      }
+
+      @media only screen and (max-width: 991px) {
+        font-size: 5rem;
+      }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 3.5rem;
+      }
+    }
+
+    & p {
+      font-size: 1.5rem;
+    }
+
+    & hr {
+      margin: 3rem 0;
+    }
+  }
+
+  & .couple--social {
+    font-size: 3rem;
+
+    & .button--social,
+    .button--social:link,
+    .button--social:visited {
+      color: #6d6875;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  & .couple--gallery {
+    margin-top: 8rem;
+
+    & img {
+      height: 30rem;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 15px;
+
+      @media only screen and (max-width: 767px) {
+        height: 25rem;
+      }
+
+      &:nth-child(2) {
+        margin-top: 8rem;
+
+        @media only screen and (max-width: 767px) {
+          margin-top: 2rem;
+        }
+      }
+
+      &:nth-child(3) {
+        @media only screen and (max-width: 991px) {
+          margin-top: 2rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+}
+
+.location {
+  color: #6d6875;
+  position: relative;
+  padding: 8rem 2rem;
+
+  &::before {
+    content: "Location & Date";
+    position: absolute;
+    top: 4.5rem;
+    left: 2rem;
+    font-size: 6rem;
+    text-align: left;
+    line-height: 6rem;
+    width: 30rem;
+    opacity: 0.3;
+
+    @media only screen and (max-width: 991px) {
+      width: 20rem;
+      top: 5rem;
+      font-size: 4.5rem;
+      line-height: 4.5rem;
+      z-index: 100;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #6d6875;
+    opacity: 0.5;
+  }
+
+  & .location--container {
+    background-color: #fffcef;
+    height: 100%;
+    padding: 5rem 8rem;
+    border-radius: 15px;
+
+    @media only screen and (max-width: 1199px) {
+      padding: 5rem 6rem;
+    }
+
+    @media only screen and (max-width: 991px) {
+      padding: 3rem;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 8rem 3rem;
+    }
+
+    & hr {
+      width: 80%;
+      margin: 2.5rem auto 5rem auto;
+    }
+  }
+
+  & .location--date {
+    & h5 {
+      font-size: 1.8rem;
+    }
+
+    & h1 {
+      font-size: 5rem;
+    }
+
+    & .timer--month {
+      margin-right: 5rem;
+    }
+
+    & .timer--week {
+      margin-right: 5rem;
+    }
+
+    & .timer--hour {
+      margin-right: 5rem;
+    }
+
+    & .button--date,
+    .button--date:link,
+    .button--date:visited {
+      width: fit-content;
+      font-size: 1.4rem;
+      background-color: #6d6875;
+      color: #ffffff;
+      padding: 1rem 2rem;
+      border-radius: 25rem;
+      text-decoration: none;
+      opacity: 0.8;
+      transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  & .location--places {
+    & .text--content {
+      & hr {
+        width: 30%;
+        margin: 1.5rem 0;
+      }
+
+      & h3 {
+        font-size: 3rem;
+
+        @media only screen and (max-width: 991px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      & p {
+        font-size: 1.5rem;
+      }
+    }
+
+    & .map {
+      position: relative;
+      width: 50rem;
+      height: 50rem;
+      background-color: #fff;
+      border-radius: 100rem;
+      margin-left: auto;
+      overflow: hidden;
+      transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+      @media only screen and (max-width: 1199px) {
+        width: 40rem;
+        height: 40rem;
+      }
+
+      @media only screen and (max-width: 991px) {
+        width: 35rem;
+        height: 35rem;
+      }
+
+      @media only screen and (max-width: 767px) {
+        width: 40rem;
+        height: 40rem;
+        margin-right: auto;
+        margin-top: 5rem;
+      }
+
+      &:hover {
+        box-shadow: 0 0 10px rgba(00, 00, 00, 0.2);
+
+        & .button--map {
+          bottom: 3rem !important;
+        }
+      }
+
+      & .button--map,
+      .button--map:link,
+      .button--map:visited {
+        font-size: 1.4rem;
+        position: absolute;
+        bottom: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #6d6875;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        border-radius: 25rem;
+        z-index: 1000;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      & .leaflet-container {
+        height: 52rem;
+
+        @media only screen and (max-width: 1199px) {
+          height: 42rem;
+        }
+
+        @media only screen and (max-width: 991px) {
+          height: 37rem;
+        }
+
+        @media only screen and (max-width: 767px) {
+          height: 42rem;
+        }
+      }
+
+      & .leaflet-div-icon {
+        border: none;
+        background-color: transparent;
+        margin-top: -1.5rem !important;
+        margin-left: -1.5rem !important;
+        width: 3rem !important;
+        height: 3rem !important;
+
+        & svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      & .leaflet-popup {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+}
+
+.wish {
+  color: #6d6875;
+  position: relative;
+  padding: 8rem 2rem;
+
+  & .wish--container {
+    background-color: #fffcef;
+    border-radius: 15px;
+    overflow: hidden;
+
+    & .wish--image {
+      max-height: 72rem;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+
+        @media only screen and (max-width: 767px) {
+          height: 35rem;
+        }
+      }
+    }
+
+    & .wish--body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem;
+
+      @media only screen and (max-width: 1199px) {
+        padding: 5rem;
+      }
+
+      & h3 {
+        font-size: 4rem;
+      }
+
+      & p,
+      label,
+      button {
+        font-size: 1.5rem;
+      }
+
+      & form {
+        margin-top: 5rem;
+
+        & input.form-control {
+          padding: 0.8rem 1rem;
+          border: none;
+          border-radius: 10rem;
+        }
+
+        & textarea.form-control {
+          padding: 0.8rem 1rem;
+          border: none;
+          border-radius: 15px;
+        }
+
+        & button {
+          border: none;
+          background-color: #6d6875;
+          color: #ffffff;
+          padding: 1rem 5rem;
+          border-radius: 25rem;
+          opacity: 0.8;
+          transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
