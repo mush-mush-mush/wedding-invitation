@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React, { useState } from "react";
+// import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import image from "./../images/wish.jpg";
 
@@ -52,23 +52,27 @@ function Wish() {
   };
 
   const { ref, inView } = useInView({ threshold: 0.2 });
-  const animation = useAnimation();
+  // const animation = useAnimation();
 
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        opacity: 0,
-      });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //     });
+  //   } else {
+  //     animation.start({
+  //       opacity: 0,
+  //     });
+  //   }
+  // }, [inView]);
 
   return (
-    <motion.article ref={ref} animate={animation} className="wish container">
-      <section className="wish--container row px-0 d-flex justify-content-center">
+    <article ref={ref} className="wish container">
+      <section
+        className={`wish--container row px-0 d-flex justify-content-center ${
+          inView ? "show" : "hide"
+        }`}
+      >
         <div className="wish--image px-0 col-lg-6 col-md-4">
           <img src={image} alt="" className=""></img>
         </div>
@@ -188,7 +192,7 @@ function Wish() {
           </form>
         </div>
       </section>
-    </motion.article>
+    </article>
   );
 }
 

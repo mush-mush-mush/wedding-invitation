@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 html {
@@ -28,6 +29,14 @@ h1,
 h2,
 h3 {
   font-weight: 700;
+}
+
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
 }
 
 .wreath {

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+import React from "react";
+// import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
@@ -15,23 +15,23 @@ import img03 from "./../images/img03.jpg";
 
 function Couple() {
   const { ref, inView } = useInView({ threshold: 0.2 });
-  const animation = useAnimation();
+  // const animation = useAnimation();
 
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        opacity: 0,
-      });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //     });
+  //   } else {
+  //     animation.start({
+  //       opacity: 0,
+  //     });
+  //   }
+  // }, [inView]);
 
   return (
-    <motion.article ref={ref} animate={animation} className="couple container">
-      <section className="row position-relative">
+    <article ref={ref} className="couple container">
+      <section className={`row position-relative ${inView ? "show" : "hide"}`}>
         {
           // inView && <Wreath />
         }
@@ -98,7 +98,7 @@ function Couple() {
           className="col-lg-4 col-md-6 col-10 ms-auto ms-md-0"
         ></img>
       </section>
-    </motion.article>
+    </article>
   );
 }
 

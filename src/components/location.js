@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
 import Leaflet from "leaflet";
-import { motion, useAnimation } from "framer-motion";
+// import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -26,19 +26,19 @@ function Location() {
   const [count, setCount] = useState([99, 99, 99, 99]);
 
   const { ref, inView } = useInView({ threshold: 0.2 });
-  const animation = useAnimation();
+  // const animation = useAnimation();
 
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        opacity: 0,
-      });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //     });
+  //   } else {
+  //     animation.start({
+  //       opacity: 0,
+  //     });
+  //   }
+  // }, [inView]);
 
   useEffect(() => {
     var countDownDate = new Date("Dec 19, 2021 09:00").getTime();
@@ -73,13 +73,8 @@ function Location() {
   }, [count]);
 
   return (
-    <motion.article
-      ref={ref}
-      animate={animation}
-      className="location container"
-      id="location"
-    >
-      <section className="location--container">
+    <article ref={ref} className="location container" id="location">
+      <section className={`location--container ${inView ? "show" : "hide"}`}>
         <div className="location--date row">
           <div className="col-12 text-center">
             <h5>Sunday, 19 December 2021</h5>
@@ -199,7 +194,7 @@ function Location() {
           </div>
         </div>
       </section>
-    </motion.article>
+    </article>
   );
 }
 
