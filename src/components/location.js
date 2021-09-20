@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
@@ -22,8 +23,43 @@ const luncheonMarkerIcon = new Leaflet.DivIcon({
   html: luncheonIcon,
 });
 
+let months, days, hours, minutes, now, distance;
+const countDownDate = new Date("Dec 19, 2021 09:00").getTime();
+
 function Location() {
   const [count, setCount] = useState([99, 99, 99, 99]);
+
+  const countdown = () => {
+    now = new Date().getTime();
+
+    distance = countDownDate - now;
+
+    months = String(Math.floor(distance / (1000 * 60 * 60 * 24 * 30))).padStart(
+      2,
+      0
+    );
+    days = String(
+      Math.floor(
+        (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
+      )
+    ).padStart(2, 0);
+    hours = String(
+      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+    ).padStart(2, 0);
+    minutes = String(
+      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+    ).padStart(2, 0);
+
+    setCount([months, days, hours, minutes]);
+
+    if (distance < 0) {
+      setCount([null]);
+    }
+  };
+
+  useEffect(() => {
+    countdown();
+  }, []);
 
   // const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
@@ -40,37 +76,9 @@ function Location() {
   //   }
   // }, [inView]);
 
-  useEffect(() => {
-    var countDownDate = new Date("Dec 19, 2021 09:00").getTime();
-
-    var x = setInterval(function () {
-      var now = new Date().getTime();
-
-      var distance = countDownDate - now;
-
-      var months = String(
-        Math.floor(distance / (1000 * 60 * 60 * 24 * 30))
-      ).padStart(2, 0);
-      var days = String(
-        Math.floor(
-          (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-        )
-      ).padStart(2, 0);
-      var hours = String(
-        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-      ).padStart(2, 0);
-      var minutes = String(
-        Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-      ).padStart(2, 0);
-
-      setCount([months, days, hours, minutes]);
-
-      if (distance < 0) {
-        clearInterval(x);
-        setCount([null]);
-      }
-    }, 1000);
-  }, [count]);
+  // useEffect(() => {
+  //   setInterval(countdown, 60000);
+  // }, [count]);
 
   return (
     <article
@@ -104,10 +112,10 @@ function Location() {
               </div>
             </div>
             <select
-              class="form-select button--date my-5 mx-auto"
+              className="form-select button--date my-5 mx-auto"
               onChange={(e) => (window.location = e.target.value)}
             >
-              <option selected defaultValue="" disabled>
+              <option selected value="/" disabled>
                 Save the Date
               </option>
               <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=NW9xdHZoanEwMzNjZXVxODc3azNpczZzZ24gYjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZw&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
@@ -169,13 +177,12 @@ function Location() {
                 Open map
               </a>
               <MapContainer
-                center={[-6.612, 106.803]}
-                zoom={14}
+                center={[-6.5986, 106.8001728]}
+                zoom={13}
                 scrollWheelZoom={false}
                 doubleClickZoom={false}
                 touchZoom={true}
                 zoomControl={false}
-                dragging={false}
               >
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
