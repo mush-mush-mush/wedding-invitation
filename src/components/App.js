@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import React from "react";
 import Couple from "./couple";
 import Header from "./header";
+import Location from "./location";
 import Quote from "./quote";
 import Wish from "./wish";
 
@@ -15,6 +16,7 @@ function App() {
       <Header />
       <Quote />
       <Couple />
+      <Location />
       <Wish />
     </motion.div>
   );
