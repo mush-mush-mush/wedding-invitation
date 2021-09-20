@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 // import { motion, useAnimation } from "framer-motion";
-import React, { useEffect } from "react";
+import React from "react";
 import image from "./../images/quote.jpg";
 import Bird from "./bird";
 import { useInView } from "react-intersection-observer";

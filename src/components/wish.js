@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 // import { motion, useAnimation } from "framer-motion";
 // import { useInView } from "react-intersection-observer";
 import image from "./../images/wish.jpg";
