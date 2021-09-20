@@ -6,7 +6,7 @@ import Bird from "./bird";
 import { useInView } from "react-intersection-observer";
 
 function Quote() {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {

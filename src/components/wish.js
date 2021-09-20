@@ -51,7 +51,7 @@ function Wish() {
       });
   };
 
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {

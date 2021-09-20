@@ -25,7 +25,7 @@ const luncheonMarkerIcon = new Leaflet.DivIcon({
 function Location() {
   const [count, setCount] = useState([99, 99, 99, 99]);
 
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {

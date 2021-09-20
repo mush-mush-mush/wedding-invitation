@@ -14,7 +14,7 @@ import img03 from "./../images/img03.jpg";
 import Wreath from "./wreath";
 
 function Couple() {
-  const { ref, inView } = useInView({ threshold: 0.2 });
+  const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {

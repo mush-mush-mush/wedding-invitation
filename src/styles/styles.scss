@@ -5,7 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  transition: 0.5s cubic-bezier(0.25, 0.13, 0.53, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.13, 0.53, 1);
 }
 
 html {
@@ -49,7 +49,7 @@ h3 {
   stroke-dashoffset: 260;
   stroke-width: 0.3rem;
   opacity: 0.3;
-  animation: dash 4s ease-in-out forwards;
+  animation: dash 3.5s ease-in-out forwards;
 }
 
 .bird {
@@ -62,7 +62,7 @@ h3 {
   stroke-dashoffset: 1650;
   stroke-width: 0.3rem;
   opacity: 0.3;
-  animation: dash 4s ease-in-out forwards;
+  animation: dash 3.5s ease-in-out forwards;
 
   @media only screen and (max-width: 767px) {
     top: -5rem;
