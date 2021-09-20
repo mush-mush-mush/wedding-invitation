@@ -519,8 +519,8 @@ h3 {
       }
 
       @media only screen and (max-width: 767px) {
-        width: 38rem;
-        height: 38rem;
+        width: 35rem;
+        height: 35rem;
         margin-right: auto;
         margin-left: auto;
         margin-top: 5rem;
@@ -568,7 +568,7 @@ h3 {
         }
 
         @media only screen and (max-width: 767px) {
-          height: 42rem;
+          height: 37rem;
         }
       }
 
@@ -627,6 +627,10 @@ h3 {
 
       @media only screen and (max-width: 1199px) {
         padding: 5rem;
+      }
+
+      @media only screen and (max-width: 767px) {
+        padding: 5rem 2rem;
       }
 
       & h3 {
