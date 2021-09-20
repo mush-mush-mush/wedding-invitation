@@ -2,7 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import React, { useEffect } from "react";
 import image from "./../images/quote.jpg";
-import Bird from "./bird";
+// import Bird from "./bird";
 import { useInView } from "react-intersection-observer";
 
 function Quote() {

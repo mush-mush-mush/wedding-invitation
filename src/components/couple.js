@@ -11,7 +11,7 @@ import groom from "./../images/groom.jpg";
 import img01 from "./../images/img01.jpg";
 import img02 from "./../images/img02.jpg";
 import img03 from "./../images/img03.jpg";
-import Wreath from "./wreath";
+// import Wreath from "./wreath";
 
 function Couple() {
   const { ref, inView } = useInView({ threshold: 0.2 });
