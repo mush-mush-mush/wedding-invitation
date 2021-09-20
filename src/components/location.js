@@ -169,12 +169,13 @@ function Location() {
                 Open map
               </a>
               <MapContainer
-                center={[-6.5986, 106.8001728]}
+                center={[-6.612, 106.803]}
                 zoom={14}
                 scrollWheelZoom={false}
                 doubleClickZoom={false}
                 touchZoom={true}
                 zoomControl={false}
+                dragging={false}
               >
                 <TileLayer
                   attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
