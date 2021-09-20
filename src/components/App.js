@@ -4,7 +4,7 @@ import Couple from "./couple";
 import Header from "./header";
 import Location from "./location";
 import Quote from "./quote";
-import Wish from "./wish";
+// import Wish from "./wish";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <Quote />
       <Couple />
       <Location />
-      <Wish />
+      {/* <Wish /> */}
     </motion.div>
   );
 }
