@@ -19,7 +19,6 @@ function Quote() {
         opacity: 0,
       });
     }
-    console.log("inview =", inView);
   }, [inView]);
 
   return (

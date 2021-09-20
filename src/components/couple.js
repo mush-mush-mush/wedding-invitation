@@ -27,7 +27,6 @@ function Couple() {
         opacity: 0,
       });
     }
-    console.log("inview =", inView);
   }, [inView]);
 
   return (

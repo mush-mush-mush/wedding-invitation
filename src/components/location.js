@@ -38,7 +38,6 @@ function Location() {
         opacity: 0,
       });
     }
-    console.log("inview =", inView);
   }, [inView]);
 
   useEffect(() => {
