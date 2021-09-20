@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
-import { motion, useAnimation } from "framer-motion";
+// import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
@@ -15,22 +15,22 @@ import Wreath from "./wreath";
 
 function Couple() {
   const { ref, inView } = useInView({ threshold: 0.2 });
-  const animation = useAnimation();
+  // const animation = useAnimation();
 
-  useEffect(() => {
-    if (inView) {
-      animation.start({
-        opacity: 1,
-      });
-    } else {
-      animation.start({
-        opacity: 0,
-      });
-    }
-  }, [inView]);
+  // useEffect(() => {
+  //   if (inView) {
+  //     animation.start({
+  //       opacity: 1,
+  //     });
+  //   } else {
+  //     animation.start({
+  //       opacity: 0,
+  //     });
+  //   }
+  // }, [inView]);
 
   return (
-    <motion.article ref={ref} animate={animation} className="couple container">
+    <article ref={ref} className="couple container">
       <section className="row position-relative">
         {inView && <Wreath />}
         <div className="groom col-lg-6 col-md-10">
@@ -96,7 +96,7 @@ function Couple() {
           className="col-lg-4 col-md-6 col-10 ms-auto ms-md-0"
         ></img>
       </section>
-    </motion.article>
+    </article>
   );
 }
 
