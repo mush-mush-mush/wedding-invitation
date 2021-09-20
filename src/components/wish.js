@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from "react";
 // import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 import image from "./../images/wish.jpg";
 
 function Wish() {
@@ -51,7 +51,7 @@ function Wish() {
       });
   };
 
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  // const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {
@@ -67,10 +67,14 @@ function Wish() {
   // }, [inView]);
 
   return (
-    <article ref={ref} className="wish container">
+    <article
+      // ref={ref}
+      className="wish container"
+    >
       <section
         className={`wish--container row px-0 d-flex justify-content-center ${
-          inView ? "show" : "hide"
+          // inView ? "show" : "hide"
+          ""
         }`}
       >
         <div className="wish--image px-0 col-lg-6 col-md-4">

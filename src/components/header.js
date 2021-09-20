@@ -1,30 +1,30 @@
-import React, { useEffect } from "react";
+import React from "react";
 import background from "./../images/main.jpg";
 
-const headerParallax = () => {
-  const header = document.querySelector(".main");
+// const headerParallax = () => {
+//   const header = document.querySelector(".main");
 
-  const sectionObserver = function (entries, observer) {
-    const [entry] = entries;
+//   const sectionObserver = function (entries, observer) {
+//     const [entry] = entries;
 
-    if (!entry.isIntersecting) return;
+//     if (!entry.isIntersecting) return;
 
-    console.log(entries);
-  };
+//     console.log(entries);
+//   };
 
-  const observe = new IntersectionObserver(sectionObserver, {
-    root: null,
-    threshold: 0.15,
-  });
+//   const observe = new IntersectionObserver(sectionObserver, {
+//     root: null,
+//     threshold: 0.15,
+//   });
 
-  observe.observe(header);
-  console.log(header);
-};
+//   observe.observe(header);
+//   console.log(header);
+// };
 
 function Header() {
-  useEffect(() => {
-    headerParallax();
-  });
+  // useEffect(() => {
+  //   headerParallax();
+  // });
 
   return (
     <article className="main container-fluid">

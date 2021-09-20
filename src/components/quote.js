@@ -2,11 +2,11 @@
 // import { motion, useAnimation } from "framer-motion";
 import React from "react";
 import image from "./../images/quote.jpg";
-import Bird from "./bird";
-import { useInView } from "react-intersection-observer";
+// import Bird from "./bird";
+// import { useInView } from "react-intersection-observer";
 
 function Quote() {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  // const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {
@@ -22,13 +22,14 @@ function Quote() {
   // }, [inView]);
 
   return (
-    <article ref={ref} className="quote container">
+    <article className="quote container">
       <section
         className={`d-flex justify-content-between align-items-center row ${
-          inView ? "show" : "hide"
+          // inView ? "show" : "hide"
+          "shows"
         }`}
       >
-        <div className="quote--left col-sm-2 col-2">{inView && <Bird />}</div>
+        <div className="quote--left col-sm-2 col-2">{}</div>
         <img src={image} alt="" className="quote--img col-sm-6 col-8"></img>
         <div className="quote--text">
           <h2>“He has made everything beautiful in its time.”</h2>

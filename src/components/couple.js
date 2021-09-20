@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 // import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
@@ -11,10 +11,10 @@ import groom from "./../images/groom.jpg";
 import img01 from "./../images/img01.jpg";
 import img02 from "./../images/img02.jpg";
 import img03 from "./../images/img03.jpg";
-import Wreath from "./wreath";
+// import Wreath from "./wreath";
 
 function Couple() {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  // const { ref, inView } = useInView({ threshold: 0.1 });
   // const animation = useAnimation();
 
   // useEffect(() => {
@@ -31,11 +31,16 @@ function Couple() {
 
   return (
     <article
-      ref={ref}
-      className={`couple container ${inView ? "show" : "hide"}`}
+      // ref={ref}
+      className={`couple container ${
+        // inView ? "show" : "hide"
+        ""
+      }`}
     >
       <section className={`row position-relative`}>
-        {inView && <Wreath />}
+        {
+          // inView && <Wreath />
+        }
         <div className="groom col-lg-6 col-md-10">
           <img src={groom} alt="" className="couple--img"></img>
           <div className="couple--text text-end">

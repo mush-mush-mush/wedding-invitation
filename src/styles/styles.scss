@@ -573,6 +573,8 @@ h3 {
 
       & .leaflet-container {
         height: 52rem;
+        border-radius: 100rem;
+        overflow: hidden;
 
         & .leaflet-pane {
           transition: none;
