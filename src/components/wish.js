@@ -80,6 +80,7 @@ function Wish() {
             netlify-honeypot="bot-field"
             onSubmit={submit}
           >
+            <input type="hidden" name="form-name" value="wishForm" />
             <div className="mb-5">
               <label htmlFor="name" className="form-label">
                 Name
