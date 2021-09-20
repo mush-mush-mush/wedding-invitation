@@ -1,10 +1,7 @@
-$font-family-sans-serif: "Montserrat", sans-serif;
-
-@import "~bootstrap/scss/bootstrap";
-
 *,
 *::before,
 *::after {
+  font-family: "Montserrat", sans-serif !important;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
