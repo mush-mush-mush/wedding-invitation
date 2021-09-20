@@ -73,8 +73,12 @@ function Location() {
   }, [count]);
 
   return (
-    <article ref={ref} className="location container" id="location">
-      <section className={`location--container ${inView ? "show" : "hide"}`}>
+    <article
+      ref={ref}
+      className={`location container ${inView ? "show" : "hide"}`}
+      id="location"
+    >
+      <section className={`location--container`}>
         <div className="location--date row">
           <div className="col-12 text-center">
             <h5>Sunday, 19 December 2021</h5>

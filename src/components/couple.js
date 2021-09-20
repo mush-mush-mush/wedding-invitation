@@ -30,8 +30,11 @@ function Couple() {
   // }, [inView]);
 
   return (
-    <article ref={ref} className="couple container">
-      <section className={`row position-relative ${inView ? "show" : "hide"}`}>
+    <article
+      ref={ref}
+      className={`couple container ${inView ? "show" : "hide"}`}
+    >
+      <section className={`row position-relative`}>
         {
           // inView && <Wreath />
         }
