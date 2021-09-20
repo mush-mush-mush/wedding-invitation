@@ -39,11 +39,13 @@ function Wish() {
 
     fetch("/", options)
       .then(function (response) {
+        setSending(false);
         setSent(true);
         setSuccess(true);
       })
       .catch(function (error) {
         console.log(error);
+        setSending(false);
         setSent(true);
         setSuccess(false);
       });
@@ -77,7 +79,7 @@ function Wish() {
           <form
             name="wishForm"
             data-netlify="true"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             onSubmit={submit}
           >
             <input type="hidden" name="form-name" value="wishForm" />
