@@ -107,7 +107,7 @@ function Location() {
               <option selected defaultValue="" disabled>
                 Save the Date
               </option>
-              <option value="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=N2Q0bm43bjFndWdxdmE4MThqNzM5Y2E3b3IgbWFyY2VsbG8uc2ViYXN0aWFuMDlAbQ&amp;tmsrc=marcello.sebastian09%40gmail.com">
+              <option value="https://calendar.google.com/calendar/u/0?cid=YjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
                 Google Calender
               </option>
               <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs">
