@@ -2,7 +2,7 @@
 // import { motion, useAnimation } from "framer-motion";
 import React from "react";
 import image from "./../images/quote.jpg";
-// import Bird from "./bird";
+import Bird from "./bird";
 import { useInView } from "react-intersection-observer";
 
 function Quote() {
@@ -28,11 +28,7 @@ function Quote() {
           inView ? "show" : "hide"
         }`}
       >
-        <div className="quote--left col-sm-2 col-2">
-          {
-            // inView && <Bird />
-          }
-        </div>
+        <div className="quote--left col-sm-2 col-2">{inView && <Bird />}</div>
         <img src={image} alt="" className="quote--img col-sm-6 col-8"></img>
         <div className="quote--text">
           <h2>“He has made everything beautiful in its time.”</h2>
