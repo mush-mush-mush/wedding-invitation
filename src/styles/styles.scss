@@ -431,7 +431,7 @@ h3 {
     }
 
     @media only screen and (max-width: 767px) {
-      padding: 8rem 3rem;
+      padding: 8rem 2rem;
     }
 
     & hr {
@@ -449,16 +449,14 @@ h3 {
       font-size: 5rem;
     }
 
-    & .timer--month {
+    & .timer--month,
+    .timer--week,
+    .timer--hour {
       margin-right: 5rem;
-    }
 
-    & .timer--week {
-      margin-right: 5rem;
-    }
-
-    & .timer--hour {
-      margin-right: 5rem;
+      @media only screen and (max-width: 767px) {
+        margin-right: 3rem;
+      }
     }
 
     & .button--date,
@@ -521,9 +519,10 @@ h3 {
       }
 
       @media only screen and (max-width: 767px) {
-        width: 40rem;
-        height: 40rem;
+        width: 38rem;
+        height: 38rem;
         margin-right: auto;
+        margin-left: auto;
         margin-top: 5rem;
       }
 
