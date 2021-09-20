@@ -37,6 +37,10 @@ h3 {
 
 .hide {
   opacity: 0;
+
+  @supports (-webkit-touch-callout: none) {
+    opacity: 1;
+  }
 }
 
 .wreath {

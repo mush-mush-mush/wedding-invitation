@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import background from "./../images/main.jpg";
 
-function header() {
+const headerParallax = () => {
+  const header = document.querySelector(".main");
+
+  const sectionObserver = function (entries, observer) {
+    const [entry] = entries;
+
+    if (!entry.isIntersecting) return;
+
+    console.log(entries);
+  };
+
+  const observe = new IntersectionObserver(sectionObserver, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  observe.observe(header);
+  console.log(header);
+};
+
+function Header() {
+  useEffect(() => {
+    headerParallax();
+  });
+
   return (
     <article className="main container-fluid">
       <header
@@ -20,4 +44,4 @@ function header() {
   );
 }
 
-export default header;
+export default Header;
