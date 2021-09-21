@@ -735,6 +735,11 @@ h3 {
   & .footer--img {
     width: 12rem;
     margin-right: 3rem;
+
+    @media only screen and (max-width: 575px) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+    }
   }
 
   & h3 {
