@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Couple from "./couple";
+import Footer from "./footer";
 import Header from "./header";
 import Location from "./location";
 import Quote from "./quote";
@@ -18,6 +19,7 @@ function App() {
       <Couple />
       <Location />
       <Wish />
+      <Footer />
     </motion.div>
   );
 }
