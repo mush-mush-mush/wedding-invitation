@@ -53,7 +53,7 @@ h3 {
   stroke-dashoffset: 260;
   stroke-width: 0.3rem;
   opacity: 0.3;
-  animation: dash 3.5s ease-in-out forwards;
+  animation: dash 3s ease-in-out forwards;
 }
 
 .bird {
@@ -147,7 +147,7 @@ h3 {
       }
 
       & h1 {
-        font-size: 4rem;
+        font-size: 4.4rem;
       }
     }
   }
@@ -308,17 +308,26 @@ h3 {
   & .couple--text {
     color: #6d6875;
     position: absolute;
-    bottom: 5rem;
+    bottom: 6rem;
     width: 50%;
+    border: 1px solid #fff;
+    padding: 1rem;
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    backdrop-filter: blur(2px);
 
     @media only screen and (max-width: 1199px) {
-      bottom: 3rem;
+      bottom: 4rem;
       width: 60%;
+    }
+
+    & h3,
+    p {
+      mix-blend-mode: multiply;
     }
 
     & h3 {
       font-size: 4.3rem;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
 
       @media only screen and (max-width: 1199px) {
         font-size: 3.6rem;

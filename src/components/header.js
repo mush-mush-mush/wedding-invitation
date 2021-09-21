@@ -35,9 +35,9 @@ function Header() {
         }}
       >
         <div className="text-area">
-          <h5>THE WEDDING OF</h5>
+          <h5>THE WEDDING OF &nbsp;———</h5>
           <h1>Glen & Prisil</h1>
-          <h4>2021.12.19</h4>
+          <h4>19 December 2021</h4>
         </div>
       </header>
     </article>

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
 import Leaflet from "leaflet";
 // import { motion, useAnimation } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
@@ -61,7 +61,7 @@ function Location() {
     countdown();
   }, []);
 
-  // const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0.15 });
   // const animation = useAnimation();
 
   // useEffect(() => {
@@ -82,11 +82,8 @@ function Location() {
 
   return (
     <article
-      // ref={ref}
-      className={`location container ${
-        // inView ? "show" : "hide"
-        ""
-      }`}
+      ref={ref}
+      className={`location container ${inView ? "show" : "hide"}`}
       id="location"
     >
       <section className={`location--container`}>

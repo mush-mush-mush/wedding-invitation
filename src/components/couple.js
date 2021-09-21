@@ -3,9 +3,7 @@ import React from "react";
 // import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
-import { faInstagramSquare } from "@fortawesome/free-brands-svg-icons";
-import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
+import { faCross } from "@fortawesome/free-solid-svg-icons";
 import bride from "./../images/bride.jpg";
 import groom from "./../images/groom.jpg";
 import img01 from "./../images/img01.jpg";
@@ -14,7 +12,7 @@ import img03 from "./../images/img03.jpg";
 import Wreath from "./wreath";
 
 function Couple() {
-  const { ref, inView } = useInView({ threshold: 0.1 });
+  const { ref, inView } = useInView({ threshold: 0.15 });
   // const animation = useAnimation();
 
   // useEffect(() => {
@@ -41,10 +39,10 @@ function Couple() {
           <div className="couple--text text-end">
             <h3>Belden Glen Kristianto</h3>
             <p>
-              Pariatur labore ex quis qui duis eiusmod eu ullamco laborum est
-              dolore labore.
+              The first son of Mr. Arif Juwono Kristianto{" "}
+              <FontAwesomeIcon icon={faCross} /> & Mrs. Beatrice Idawati Sanusi
             </p>
-            <hr></hr>
+            {/* <hr></hr>
             <div className="couple--social d-flex justify-content-end">
               <a href="/" className="button--social me-3">
                 <FontAwesomeIcon icon={faFacebookSquare} />
@@ -55,7 +53,7 @@ function Couple() {
               <a href="/" className="button--social me-3">
                 <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="bride col-lg-6 col-md-10 ms-md-auto d-flex justify-content-end">
@@ -63,10 +61,9 @@ function Couple() {
           <div className="couple--text text-start">
             <h3>Priscillia Sebastian</h3>
             <p>
-              Pariatur labore ex quis qui duis eiusmod eu ullamco laborum est
-              dolore labore.
+              The first daughter of Mr. Andy Suryadi & Mrs. Anastasia Sebastian
             </p>
-            <hr></hr>
+            {/* <hr></hr>
             <div className="couple--social d-flex justify-content-start">
               <a href="/" className="button--social me-3">
                 <FontAwesomeIcon icon={faFacebookSquare} />
@@ -77,7 +74,7 @@ function Couple() {
               <a href="/" className="button--social me-3">
                 <FontAwesomeIcon icon={faTwitterSquare} />
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="row"></div>
