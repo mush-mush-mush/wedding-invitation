@@ -39,8 +39,8 @@ function Couple() {
           <div className="couple--text text-end">
             <h3>Belden Glen Kristianto</h3>
             <p>
-              The first son of Mr. Arif Juwono Kristianto{" "}
-              <FontAwesomeIcon icon={faCross} /> & Mrs. Beatrice Idawati Sanusi
+              The first son of Mr. Arif Juwono Kristianto({" "}
+              <FontAwesomeIcon icon={faCross} />) & Mrs. Beatrice Idawati Sanusi
             </p>
             {/* <hr></hr>
             <div className="couple--social d-flex justify-content-end">
