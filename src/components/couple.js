@@ -37,7 +37,7 @@ function Couple() {
         <div className="groom col-lg-6 col-md-10">
           <img src={groom} alt="" className="couple--img"></img>
           <div className="couple--text text-end">
-            <h3>Belden Glen Kristianto</h3>
+            <h3>Belden Glen Kristianto, B.Sc</h3>
             <p>
               The first son of Mr. Arif Juwono Kristianto(
               <FontAwesomeIcon icon={faCross} />) & Mrs. Beatrice Idawati Sanusi
@@ -59,7 +59,7 @@ function Couple() {
         <div className="bride col-lg-6 col-md-10 ms-md-auto d-flex justify-content-end">
           <img src={bride} alt="" className="couple--img"></img>
           <div className="couple--text text-start">
-            <h3>Priscillia Sebastian</h3>
+            <h3>Priscillia Sebastian, S.Hum</h3>
             <p>
               The first daughter of Mr. Andy Suryadi & Mrs. Anastasia Sebastian
             </p>
