@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 // import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import image from "./../images/wish.JPG";
+import image from "./../images/wish.jpg";
 
 function Wish() {
   const [name, setName] = useState("");

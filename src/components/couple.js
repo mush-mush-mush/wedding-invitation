@@ -4,11 +4,11 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCross } from "@fortawesome/free-solid-svg-icons";
-import bride from "./../images/bride.JPG";
-import groom from "./../images/groom.JPG";
-import img01 from "./../images/img01.JPG";
-import img02 from "./../images/img02.JPG";
-import img03 from "./../images/img03.JPG";
+import bride from "./../images/bride.jpg";
+import groom from "./../images/groom.jpg";
+import img01 from "./../images/img01.jpg";
+import img02 from "./../images/img02.jpg";
+import img03 from "./../images/img03.jpg";
 import Wreath from "./wreath";
 
 function Couple() {
