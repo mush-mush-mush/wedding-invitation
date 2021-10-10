@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
+import { BrowserRouter, Route } from "react-router-dom";
 import Leaflet from "leaflet";
 // import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -86,43 +87,44 @@ function Location() {
       className={`location container ${inView ? "show" : "hide"}`}
       id="location"
     >
-      <section className={`location--container`}>
-        <div className="location--date row">
-          <div className="col-12 text-center">
-            <h5>Sunday, 19 December 2021</h5>
-            <div className="timer d-flex justify-content-center my-4">
-              <div className="timer--month text-center">
-                <h1>{count[0]}</h1>
-                <p>months</p>
+      <BrowserRouter>
+        <section className={`location--container`}>
+          <div className="location--date row">
+            <div className="col-12 text-center">
+              <h5>Sunday, 19 December 2021</h5>
+              <div className="timer d-flex justify-content-center my-4">
+                <div className="timer--month text-center">
+                  <h1>{count[0]}</h1>
+                  <p>months</p>
+                </div>
+                <div className="timer--week text-center">
+                  <h1>{count[1]}</h1>
+                  <p>weeks</p>
+                </div>
+                <div className="timer--hour text-center">
+                  <h1>{count[2]}</h1>
+                  <p>hours</p>
+                </div>
+                <div className="timer--minute text-center">
+                  <h1>{count[3]}</h1>
+                  <p>minutes</p>
+                </div>
               </div>
-              <div className="timer--week text-center">
-                <h1>{count[1]}</h1>
-                <p>weeks</p>
-              </div>
-              <div className="timer--hour text-center">
-                <h1>{count[2]}</h1>
-                <p>hours</p>
-              </div>
-              <div className="timer--minute text-center">
-                <h1>{count[3]}</h1>
-                <p>minutes</p>
-              </div>
-            </div>
-            <select
-              className="form-select button--date my-5 mx-auto"
-              onChange={(e) => (window.location = e.target.value)}
-            >
-              <option selected value="/" disabled>
-                Save the Date
-              </option>
-              <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=NW9xdHZoanEwMzNjZXVxODc3azNpczZzZ24gYjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZw&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
-                Google Calender
-              </option>
-              <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs">
-                Apple iCalender
-              </option>
-            </select>
-            {/* <a
+              <select
+                className="form-select button--date my-5 mx-auto"
+                onChange={(e) => (window.location = e.target.value)}
+              >
+                <option selected value="/" disabled>
+                  Save the Date
+                </option>
+                <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=NW9xdHZoanEwMzNjZXVxODc3azNpczZzZ24gYjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZw&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
+                  Google Calender
+                </option>
+                <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs">
+                  Apple iCalender
+                </option>
+              </select>
+              {/* <a
               target="_blank"
               // href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=N2Q0bm43bjFndWdxdmE4MThqNzM5Y2E3b3IgbWFyY2VsbG8uc2ViYXN0aWFuMDlAbQ&amp;tmsrc=marcello.sebastian09%40gmail.com"
               href="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs"
@@ -131,81 +133,136 @@ function Location() {
             >
               Save the Date
             </a> */}
-          </div>
-        </div>
-        <hr />
-        <div className="location--places row align-items-center">
-          <div className="places--details col-md-6">
-            <div className="text--content mb-5">
-              <h3>Holy Matrimony</h3>
-              <hr />
-              <p>
-                <strong>Sunday, Dec 19 2021</strong>
-                <br />
-                09:00 AM
-              </p>
-              <p>
-                <strong>Chapel of Regina Pacis</strong>
-                <br />
-                Jl. Ir. H. Juanda No.2, Pabaton, Bogor
-              </p>
-            </div>
-            <div className="text--content mt-5">
-              <h3>Luncheon</h3>
-              <hr />
-              <p>
-                <strong>Sunday, Dec 19 2021</strong>
-                <br />
-                12:00 AM
-              </p>
-              <p>
-                <strong>Djoeragon Resto</strong>
-                <br />
-                Jl. Suryakencana No.179-181, Babakan Ps., Bogor
-              </p>
             </div>
           </div>
-          <div className="places--map col-md-6">
-            <div className="map">
-              <a
-                href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY"
-                className="button--map"
-              >
-                Open map
-              </a>
-              <MapContainer
-                center={[-6.5986, 106.8001728]}
-                zoom={13}
-                scrollWheelZoom={false}
-                doubleClickZoom={false}
-                touchZoom={true}
-                zoomControl={false}
-              >
-                <TileLayer
-                  attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                  url="https://api.mapbox.com/styles/v1/mushmushmush/cktpeon7j25vn17o4b45n6wiv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibXVzaG11c2htdXNoIiwiYSI6ImNrdHBlcjN0NjBtNzEzMG1waHZwNXdkdGYifQ.H3Ys3dq8x9IUJzYAogX1nA"
-                />
-                <Marker
-                  position={[-6.59262, 106.79645]}
-                  icon={matrimonyMarkerIcon}
-                >
-                  <Popup>
-                    <strong>Holy Matrimony</strong>
-                  </Popup>
-                </Marker>
-                <Marker
-                  position={[-6.60705, 106.80168]}
-                  icon={luncheonMarkerIcon}
-                >
-                  <Popup>
-                    <strong>Luncheon</strong>
-                  </Popup>
-                </Marker>
-              </MapContainer>
+          <hr />
+          <Route path="/" exact>
+            <div className="location--places row align-items-center">
+              <div className="places--details col-md-6">
+                <div className="text--content mb-5">
+                  <h3>Holy Matrimony</h3>
+                  <hr />
+                  <p>
+                    <strong>Sunday, Dec 19 2021</strong>
+                    <br />
+                    09:00 AM
+                  </p>
+                  <p>
+                    <strong>Chapel of Regina Pacis</strong>
+                    <br />
+                    Jl. Ir. H. Juanda No.2, Pabaton, Bogor
+                  </p>
+                </div>
+              </div>
+              <div className="places--map col-md-6">
+                <div className="map map-small">
+                  <a
+                    href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY"
+                    className="button--map"
+                  >
+                    Open map
+                  </a>
+                  <MapContainer
+                    center={[-6.5986, 106.8001728]}
+                    zoom={14}
+                    scrollWheelZoom={false}
+                    doubleClickZoom={false}
+                    touchZoom={true}
+                    zoomControl={false}
+                  >
+                    <TileLayer
+                      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                      url="https://api.mapbox.com/styles/v1/mushmushmush/cktpeon7j25vn17o4b45n6wiv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibXVzaG11c2htdXNoIiwiYSI6ImNrdHBlcjN0NjBtNzEzMG1waHZwNXdkdGYifQ.H3Ys3dq8x9IUJzYAogX1nA"
+                    />
+                    <Marker
+                      position={[-6.59262, 106.79645]}
+                      icon={matrimonyMarkerIcon}
+                    >
+                      <Popup>
+                        <strong>Holy Matrimony</strong>
+                      </Popup>
+                    </Marker>
+                  </MapContainer>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </Route>
+          <Route path="/f">
+            <div className="location--places row align-items-center">
+              <div className="places--details col-md-6">
+                <div className="text--content mb-5">
+                  <h3>Holy Matrimony</h3>
+                  <hr />
+                  <p>
+                    <strong>Sunday, Dec 19 2021</strong>
+                    <br />
+                    09:00 AM
+                  </p>
+                  <p>
+                    <strong>Chapel of Regina Pacis</strong>
+                    <br />
+                    Jl. Ir. H. Juanda No.2, Pabaton, Bogor
+                  </p>
+                </div>
+
+                <div className="text--content mt-5">
+                  <h3>Luncheon</h3>
+                  <hr />
+                  <p>
+                    <strong>Sunday, Dec 19 2021</strong>
+                    <br />
+                    12:00 AM
+                  </p>
+                  <p>
+                    <strong>Djoeragon Resto</strong>
+                    <br />
+                    Jl. Suryakencana No.179-181, Babakan Ps., Bogor
+                  </p>
+                </div>
+              </div>
+              <div className="places--map col-md-6">
+                <div className="map">
+                  <a
+                    href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY"
+                    className="button--map"
+                  >
+                    Open map
+                  </a>
+                  <MapContainer
+                    center={[-6.5986, 106.8001728]}
+                    zoom={13}
+                    scrollWheelZoom={false}
+                    doubleClickZoom={false}
+                    touchZoom={true}
+                    zoomControl={false}
+                  >
+                    <TileLayer
+                      attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                      url="https://api.mapbox.com/styles/v1/mushmushmush/cktpeon7j25vn17o4b45n6wiv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibXVzaG11c2htdXNoIiwiYSI6ImNrdHBlcjN0NjBtNzEzMG1waHZwNXdkdGYifQ.H3Ys3dq8x9IUJzYAogX1nA"
+                    />
+                    <Marker
+                      position={[-6.59262, 106.79645]}
+                      icon={matrimonyMarkerIcon}
+                    >
+                      <Popup>
+                        <strong>Holy Matrimony</strong>
+                      </Popup>
+                    </Marker>
+                    <Marker
+                      position={[-6.60705, 106.80168]}
+                      icon={luncheonMarkerIcon}
+                    >
+                      <Popup>
+                        <strong>Luncheon</strong>
+                      </Popup>
+                    </Marker>
+                  </MapContainer>
+                </div>
+              </div>
+            </div>
+          </Route>
+        </section>
+      </BrowserRouter>
     </article>
   );
 }

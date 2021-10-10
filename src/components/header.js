@@ -1,5 +1,5 @@
 import React from "react";
-import background from "./../images/main.jpg";
+import background from "./../images/main.JPG";
 
 // const headerParallax = () => {
 //   const header = document.querySelector(".main");
