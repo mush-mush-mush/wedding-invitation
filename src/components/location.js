@@ -214,7 +214,7 @@ function Location() {
                     12:00 AM
                   </p>
                   <p>
-                    <strong>Djoeragon Resto</strong>
+                    <strong>Djoeragan Resto</strong>
                     <br />
                     Jl. Suryakencana No.179-181, Babakan Ps., Bogor
                   </p>
