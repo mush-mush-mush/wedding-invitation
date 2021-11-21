@@ -99,7 +99,7 @@ function Location() {
                 </div>
                 <div className="timer--week text-center">
                   <h1>{count[1]}</h1>
-                  <p>weeks</p>
+                  <p>days</p>
                 </div>
                 <div className="timer--hour text-center">
                   <h1>{count[2]}</h1>
@@ -110,29 +110,39 @@ function Location() {
                   <p>minutes</p>
                 </div>
               </div>
-              <select
-                className="form-select button--date my-5 mx-auto"
-                onChange={(e) => (window.location = e.target.value)}
-              >
-                <option selected value="/" disabled>
-                  Save the Date
-                </option>
-                <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=NW9xdHZoanEwMzNjZXVxODc3azNpczZzZ24gYjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZw&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
-                  Google Calender
-                </option>
-                <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs">
-                  Apple iCalender
-                </option>
-              </select>
-              {/* <a
-              target="_blank"
-              // href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=N2Q0bm43bjFndWdxdmE4MThqNzM5Y2E3b3IgbWFyY2VsbG8uc2ViYXN0aWFuMDlAbQ&amp;tmsrc=marcello.sebastian09%40gmail.com"
-              href="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs"
-              className="button--date my-5"
-              rel="noreferrer"
-            >
-              Save the Date
-            </a> */}
+              <Route path="/" exact>
+                <select
+                  className="form-select button--date my-5 mx-auto"
+                  onChange={(e) => (window.location = e.target.value)}
+                >
+                  <option selected value="/" disabled>
+                    Save the Date
+                  </option>
+
+                  <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=Mzg1MmYwaGt1dm9jdDU5N2o1bmtzMm9nYmMgc2hyb29tLm1pc2gxMkBt&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
+                    Google Calender
+                  </option>
+                  <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN8NiOgBiRURzCGSnMbaAK0Nx9Mg3QM64c-ZSwV29kpwCSf4olW2QqrPpkeKNMOiK28">
+                    Apple iCalender
+                  </option>
+                </select>
+              </Route>
+              <Route path="/f">
+                <select
+                  className="form-select button--date my-5 mx-auto"
+                  onChange={(e) => (window.location = e.target.value)}
+                >
+                  <option selected value="/" disabled>
+                    Save the Date
+                  </option>
+                  <option value="https://calendar.google.com/event?action=TEMPLATE&tmeid=NW9xdHZoanEwMzNjZXVxODc3azNpczZzZ24gYjdjbW4zdDlydHEzN21rcDg3MWU2NnFob2NAZw&tmsrc=b7cmn3t9rtq37mkp871e66qhoc%40group.calendar.google.com">
+                    Google Calender
+                  </option>
+                  <option value="webcal://p31-caldav.icloud.com/published/2/MTc0NzA3NjM5NjUxNzQ3MPMcgqPU3O3ST7OxEmPkkN900VP5daBhGMcFrM1dJPVP-Rg9Jm3sHygNdJ3AQLMUihu0UybqtV7p_PcOs7nuoIs">
+                    Apple iCalender
+                  </option>
+                </select>
+              </Route>
             </div>
           </div>
           <hr />
@@ -157,7 +167,7 @@ function Location() {
               <div className="places--map col-md-6">
                 <div className="map map-small">
                   <a
-                    href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY"
+                    href="https://www.google.com/maps/d/viewer?mid=1XFWT9VQX9vp0GM63MTA0SXZ-_pMXHG6A"
                     className="button--map"
                   >
                     Open map
