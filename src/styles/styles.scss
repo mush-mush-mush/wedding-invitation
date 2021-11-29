@@ -551,7 +551,7 @@ h3 {
       background-color: #fff;
       border-radius: 100rem;
       margin-left: auto;
-      overflow: hidden;
+      overflow: hidden !important;
       transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 
       @media only screen and (max-width: 1199px) {
@@ -587,6 +587,11 @@ h3 {
         @media only screen and (max-width: 991px) {
           width: 35rem;
           height: 35rem;
+        }
+
+        @media only screen and (max-width: 420px) {
+          width: 32rem;
+          height: 32rem;
         }
       }
 
