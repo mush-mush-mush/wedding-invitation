@@ -68,6 +68,10 @@ h3 {
     top: -5rem;
     width: 23rem;
   }
+
+  @media only screen and (max-width: 420px) {
+    width: 21.5rem;
+  }
 }
 
 @keyframes dash {
@@ -563,6 +567,14 @@ h3 {
       @media only screen and (max-width: 767px) {
         width: 35rem;
         height: 35rem;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 5rem;
+      }
+
+      @media only screen and (max-width: 420px) {
+        width: 32rem;
+        height: 32rem;
         margin-right: auto;
         margin-left: auto;
         margin-top: 5rem;
