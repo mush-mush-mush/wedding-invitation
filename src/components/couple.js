@@ -13,19 +13,6 @@ import Wreath from "./wreath";
 
 function Couple() {
   const { ref, inView } = useInView({ threshold: 0.15 });
-  // const animation = useAnimation();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     animation.start({
-  //       opacity: 1,
-  //     });
-  //   } else {
-  //     animation.start({
-  //       opacity: 0,
-  //     });
-  //   }
-  // }, [inView]);
 
   return (
     <article
@@ -42,20 +29,8 @@ function Couple() {
             </h3>
             <p>
               The first son of Mr. Arif Juwono Kristianto(
-              <FontAwesomeIcon icon={faCross} />) & Mrs. Beatrice Idawati Sanusi
+              <FontAwesomeIcon icon={faCross} />) & Dr. Beatrice Idawati Sanusi
             </p>
-            {/* <hr></hr>
-            <div className="couple--social d-flex justify-content-end">
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faFacebookSquare} />
-              </a>
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faInstagramSquare} />
-              </a>
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faTwitterSquare} />
-              </a>
-            </div> */}
           </div>
         </div>
         <div className="bride col-lg-6 col-md-10 ms-md-auto d-flex justify-content-end">
@@ -68,18 +43,6 @@ function Couple() {
             <p>
               The first daughter of Mr. Andy Suryadi & Mrs. Anastasia Sebastian
             </p>
-            {/* <hr></hr>
-            <div className="couple--social d-flex justify-content-start">
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faFacebookSquare} />
-              </a>
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faInstagramSquare} />
-              </a>
-              <a href="/" className="button--social me-3">
-                <FontAwesomeIcon icon={faTwitterSquare} />
-              </a>
-            </div> */}
           </div>
         </div>
         <div className="row"></div>

@@ -71,7 +71,7 @@ function Location() {
         <section className={`location--container`}>
           <div className="location--date row">
             <div className="col-12 text-center">
-              <h5>Sunday, 19 December 2021</h5>
+              <h5>Sunday, Dec 19, 2021</h5>
               <div className="timer d-flex justify-content-center my-4">
                 <div className="timer--month text-center">
                   <h1>{count[0]}</h1>
@@ -133,7 +133,7 @@ function Location() {
                   <h3>Holy Matrimony</h3>
                   <hr />
                   <p>
-                    <strong>Sunday, 19 Dec 2021</strong>
+                    <strong>Sunday, Dec 19, 2021</strong>
                     <br />
                     09:00 AM
                   </p>
@@ -184,7 +184,7 @@ function Location() {
                   <h3>Holy Matrimony</h3>
                   <hr />
                   <p>
-                    <strong>Sunday, 19 Dec 2021</strong>
+                    <strong>Sunday, Dec 19, 2021</strong>
                     <br />
                     09:00 AM
                   </p>
@@ -199,7 +199,7 @@ function Location() {
                   <h3>Luncheon</h3>
                   <hr />
                   <p>
-                    <strong>Sunday, 19 Dec 2021</strong>
+                    <strong>Sunday, Dec 19, 2021</strong>
                     <br />
                     12:00 AM
                   </p>
