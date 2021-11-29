@@ -1,10 +1,7 @@
-/* eslint-disable no-use-before-define */
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import ReactDOMServer from "react-dom/server";
 import { BrowserRouter, Route } from "react-router-dom";
 import Leaflet from "leaflet";
-// import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
@@ -63,23 +60,6 @@ function Location() {
   }, []);
 
   const { ref, inView } = useInView({ threshold: 0.15 });
-  // const animation = useAnimation();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     animation.start({
-  //       opacity: 1,
-  //     });
-  //   } else {
-  //     animation.start({
-  //       opacity: 0,
-  //     });
-  //   }
-  // }, [inView]);
-
-  // useEffect(() => {
-  //   setInterval(countdown, 60000);
-  // }, [count]);
 
   return (
     <article
