@@ -206,7 +206,8 @@ function Location() {
                   <p>
                     <strong>Djoeragan Resto</strong>
                     <br />
-                    Jl. Suryakencana No.179-181, Babakan Ps., Bogor
+                    The 101 Hotel Suryakencana
+                    <br /> Jl. Suryakencana No.179-181, Babakan Ps., Bogor
                   </p>
                 </div>
               </div>
