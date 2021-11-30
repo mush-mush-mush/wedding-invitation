@@ -29,7 +29,7 @@ function Couple() {
             </h3>
             <p>
               The first son of Mr. Arif Juwono Kristianto(
-              <FontAwesomeIcon icon={faCross} />) & Dr. Beatrice Idawati Sanusi
+              <FontAwesomeIcon icon={faCross} />) & dr. Beatrice Idawati Sanusi
             </p>
           </div>
         </div>
