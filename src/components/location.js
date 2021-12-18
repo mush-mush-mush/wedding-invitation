@@ -1,28 +1,24 @@
-import React, { useEffect, useState } from "react";
-import ReactDOMServer from "react-dom/server";
-import { BrowserRouter, Route } from "react-router-dom";
-import Leaflet from "leaflet";
-import { useInView } from "react-intersection-observer";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import React, { useEffect, useState } from 'react';
+import ReactDOMServer from 'react-dom/server';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Leaflet from 'leaflet';
+import { useInView } from 'react-intersection-observer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const matrimonyIcon = ReactDOMServer.renderToString(
-  <FontAwesomeIcon icon={faMapMarkerAlt} />
-);
+const matrimonyIcon = ReactDOMServer.renderToString(<FontAwesomeIcon icon={faMapMarkerAlt} />);
 const matrimonyMarkerIcon = new Leaflet.DivIcon({
   html: matrimonyIcon,
 });
 
-const luncheonIcon = ReactDOMServer.renderToString(
-  <FontAwesomeIcon icon={faMapMarkerAlt} />
-);
+const luncheonIcon = ReactDOMServer.renderToString(<FontAwesomeIcon icon={faMapMarkerAlt} />);
 const luncheonMarkerIcon = new Leaflet.DivIcon({
   html: luncheonIcon,
 });
 
 let months, days, hours, minutes, now, distance;
-const countDownDate = new Date("Dec 19, 2021 09:00").getTime();
+const countDownDate = new Date('Dec 19, 2021 09:00').getTime();
 
 function Location() {
   const [count, setCount] = useState([99, 99, 99, 99]);
@@ -32,26 +28,15 @@ function Location() {
 
     distance = countDownDate - now;
 
-    months = String(Math.floor(distance / (1000 * 60 * 60 * 24 * 30))).padStart(
-      2,
-      0
-    );
-    days = String(
-      Math.floor(
-        (distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24)
-      )
-    ).padStart(2, 0);
-    hours = String(
-      Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
-    ).padStart(2, 0);
-    minutes = String(
-      Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-    ).padStart(2, 0);
+    months = String(Math.floor(distance / (1000 * 60 * 60 * 24 * 30))).padStart(2, 0);
+    days = String(Math.floor((distance % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24))).padStart(2, 0);
+    hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, 0);
+    minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, 0);
 
     setCount([months, days, hours, minutes]);
 
-    if (distance < 0) {
-      setCount([null]);
+    if (distance < 60000) {
+      setCount(['00', '00', '00', '00']);
     }
   };
 
@@ -62,11 +47,7 @@ function Location() {
   const { ref, inView } = useInView({ threshold: 0.15 });
 
   return (
-    <article
-      ref={ref}
-      className={`location container ${inView ? "show" : "hide"}`}
-      id="location"
-    >
+    <article ref={ref} className={`location container ${inView ? 'show' : 'hide'}`} id="location">
       <BrowserRouter>
         <section className={`location--container`}>
           <div className="location--date row">
@@ -91,10 +72,7 @@ function Location() {
                 </div>
               </div>
               <Route path="/" exact>
-                <select
-                  className="form-select button--date my-5 mx-auto"
-                  onChange={(e) => (window.location = e.target.value)}
-                >
+                <select className="form-select button--date my-5 mx-auto" onChange={(e) => (window.location = e.target.value)}>
                   <option selected value="/" disabled>
                     Save the Date
                   </option>
@@ -108,10 +86,7 @@ function Location() {
                 </select>
               </Route>
               <Route path="/f">
-                <select
-                  className="form-select button--date my-5 mx-auto"
-                  onChange={(e) => (window.location = e.target.value)}
-                >
+                <select className="form-select button--date my-5 mx-auto" onChange={(e) => (window.location = e.target.value)}>
                   <option selected value="/" disabled>
                     Save the Date
                   </option>
@@ -146,10 +121,7 @@ function Location() {
               </div>
               <div className="places--map col-md-6">
                 <div className="map map-small">
-                  <a
-                    href="https://www.google.com/maps/d/viewer?mid=1XFWT9VQX9vp0GM63MTA0SXZ-_pMXHG6A"
-                    className="button--map"
-                  >
+                  <a href="https://www.google.com/maps/d/viewer?mid=1XFWT9VQX9vp0GM63MTA0SXZ-_pMXHG6A" className="button--map">
                     Open map
                   </a>
                   <MapContainer
@@ -164,10 +136,7 @@ function Location() {
                       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                       url="https://api.mapbox.com/styles/v1/mushmushmush/cktpeon7j25vn17o4b45n6wiv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibXVzaG11c2htdXNoIiwiYSI6ImNrdHBlcjN0NjBtNzEzMG1waHZwNXdkdGYifQ.H3Ys3dq8x9IUJzYAogX1nA"
                     />
-                    <Marker
-                      position={[-6.59262, 106.79645]}
-                      icon={matrimonyMarkerIcon}
-                    >
+                    <Marker position={[-6.59262, 106.79645]} icon={matrimonyMarkerIcon}>
                       <Popup>
                         <strong>Holy Matrimony</strong>
                       </Popup>
@@ -213,10 +182,7 @@ function Location() {
               </div>
               <div className="places--map col-md-6">
                 <div className="map">
-                  <a
-                    href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY"
-                    className="button--map"
-                  >
+                  <a href="https://www.google.com/maps/d/viewer?mid=1vAvhuexP1TvILn3JCjDtL5325n4-dRxY" className="button--map">
                     Open map
                   </a>
                   <MapContainer
@@ -231,18 +197,12 @@ function Location() {
                       attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                       url="https://api.mapbox.com/styles/v1/mushmushmush/cktpeon7j25vn17o4b45n6wiv/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoibXVzaG11c2htdXNoIiwiYSI6ImNrdHBlcjN0NjBtNzEzMG1waHZwNXdkdGYifQ.H3Ys3dq8x9IUJzYAogX1nA"
                     />
-                    <Marker
-                      position={[-6.59262, 106.79645]}
-                      icon={matrimonyMarkerIcon}
-                    >
+                    <Marker position={[-6.59262, 106.79645]} icon={matrimonyMarkerIcon}>
                       <Popup>
                         <strong>Holy Matrimony</strong>
                       </Popup>
                     </Marker>
-                    <Marker
-                      position={[-6.60705, 106.80168]}
-                      icon={luncheonMarkerIcon}
-                    >
+                    <Marker position={[-6.60705, 106.80168]} icon={luncheonMarkerIcon}>
                       <Popup>
                         <strong>Luncheon</strong>
                       </Popup>
